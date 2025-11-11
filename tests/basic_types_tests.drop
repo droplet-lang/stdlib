@@ -1,4 +1,4 @@
-import sys.types.basic
+import types.basic
 
 fn main() {
     let a = Int(5)
