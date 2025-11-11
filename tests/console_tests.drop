@@ -1,0 +1,13 @@
+import sys.types.basic
+
+fn main() {
+    let reader = Reader()
+
+    let hI = reader.nextInt()
+    let hJ = reader.nextInt()
+
+    println("Sum:", hI + hJ)
+
+    let name = reader.nextLine("Enter your name: ")
+    println("Hello,", name)
+}

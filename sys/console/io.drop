@@ -1,0 +1,37 @@
+mod sys.console.io
+
+class Reader {
+    
+    // Read a line as string
+    fn nextLine() -> str {
+        return input() as str
+    }
+
+    // Read a line with a prompt
+    fn nextLine(prompt: str) -> str {
+        return input(prompt) as str
+    }
+
+    // Read an integer
+    fn nextInt() -> int {
+        let line = input()
+        return int(line) as int
+    }
+
+    // Read a float
+    fn nextFloat() -> float {
+        let line = input()
+        return float(line) as int
+    }
+}
+
+class Writer {
+
+    static fn print(msg: str) -> void {
+        print(msg)
+    }
+
+    static fn println(msg: str) -> void {
+        println(msg)
+    }
+}

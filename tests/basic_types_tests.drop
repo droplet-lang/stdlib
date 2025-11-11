@@ -1,0 +1,13 @@
+import sys.types.basic
+
+fn main() {
+    let a = Int(5)
+    let b = Int(10)
+    println("Sum:", (a + b).toString())
+
+    let f = Float(3.14)
+    println("Float:", f.toString())
+
+    let flag = Bool(true)
+    println("Bool:", flag.toString())
+}

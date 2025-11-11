@@ -1,0 +1,137 @@
+mod sys.types.basic
+
+class Int {
+    priv value: int
+
+    // Constructor
+    new(value: int) {
+        self.value = value
+    }
+
+    // Get internal value
+    fn get() -> int {
+        return self.value
+    }
+
+    // Set internal value
+    fn set(value: int) -> void {
+        self.value = value
+    }
+
+    // Operator Overloads
+    op +(other: Int) -> Int {
+        return Int(self.value + other.value)
+    }
+
+    op -(other: Int) -> Int {
+        return Int(self.value - other.value)
+    }
+
+    op *(other: Int) -> Int {
+        return Int(self.value * other.value)
+    }
+
+    op /(other: Int) -> Int {
+        return Int(self.value / other.value)
+    }
+
+    op ==(other: Int) -> bool {
+        return self.value == other.value
+    }
+
+    op <(other: Int) -> bool {
+        return self.value < other.value
+    }
+
+    op >(other: Int) -> bool {
+        return self.value > other.value
+    }
+
+    fn toString() -> str {
+        let s = str(self.value) as str
+        return s 
+    }
+
+    fn abs() -> Int {
+        if self.value < 0 {
+            return Int(-self.value)
+        }
+        return Int(self.value)
+    }
+}
+
+class Float {
+    priv value: float
+
+    new(value: float) {
+        self.value = value
+    }
+
+    fn get() -> float {
+        return self.value
+    }
+
+    fn set(value: float) -> void {
+        self.value = value
+    }
+
+    op +(other: Float) -> Float {
+        return Float(self.value + other.value)
+    }
+
+    op -(other: Float) -> Float {
+        return Float(self.value - other.value)
+    }
+
+    op *(other: Float) -> Float {
+        return Float(self.value * other.value)
+    }
+
+    op /(other: Float) -> Float {
+        return Float(self.value / other.value)
+    }
+
+    op ==(other: Float) -> bool {
+        return self.value == other.value
+    }
+
+    fn toString() -> str {
+        let s = str(self.value) as str
+        return s 
+    }
+
+    fn abs() -> Float {
+        if self.value < 0.0 {
+            return Float(-self.value)
+        }
+        return Float(self.value)
+    }
+}
+
+class Bool {
+    priv value: bool
+
+    new(value: bool) {
+        self.value = value
+    }
+
+    fn get() -> bool {
+        return self.value
+    }
+
+    fn set(value: bool) -> void {
+        self.value = value
+    }
+
+    op ==(other: Bool) -> bool {
+        return self.value == other.value
+    }
+
+    fn toString() -> str {
+        if self.value { 
+            return "true" 
+        } else {
+            return "false" 
+        }
+    }
+}
