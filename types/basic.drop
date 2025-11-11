@@ -1,4 +1,4 @@
-mod sys.types.basic
+mod stdlib.types.basic
 
 class Int {
     priv value: int
