@@ -7,11 +7,6 @@ class Reader {
         return input() as str
     }
 
-    // Read a line with a prompt
-    fn nextLine(prompt: str) -> str {
-        return input(prompt) as str
-    }
-
     // Read an integer
     fn nextInt() -> int {
         let line = input()
